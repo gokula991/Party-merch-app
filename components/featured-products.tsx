@@ -1,6 +1,4 @@
 "use client"
-
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { useCart } from "@/contexts/cart-context"
 import Link from "next/link"
@@ -79,13 +77,12 @@ export function FeaturedProducts() {
                   <h3 className="font-semibold text-gray-900 mb-2 drop-shadow-sm">{product.name}</h3>
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-bold text-gray-900 drop-shadow-sm">${product.price}</span>
-                    <Button
-                      size="sm"
+                    <button
                       onClick={() => handleAddToCart(product)}
-                      className="bg-primary text-white hover:bg-primary/90 transition-colors duration-200 shadow-sm hover:shadow-md"
+                      className="glass-button-secondary text-sm px-4 py-2"
                     >
                       Add to Cart
-                    </Button>
+                    </button>
                   </div>
                 </div>
               </CardContent>
@@ -94,13 +91,9 @@ export function FeaturedProducts() {
         </div>
 
         <div className="text-center">
-          <Button
-            size="lg"
-            asChild
-            className="bg-primary text-white hover:bg-primary/90 transition-colors duration-200 shadow-md hover:shadow-lg"
-          >
-            <Link href="/products">View All Products</Link>
-          </Button>
+          <Link href="/products" className="glass-button-primary">
+            View All Products
+          </Link>
         </div>
       </div>
     </section>

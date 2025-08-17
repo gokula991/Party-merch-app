@@ -4,7 +4,6 @@ import type React from "react"
 
 import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Users, Target, Heart } from "lucide-react"
 
 export function CampaignHighlights() {
@@ -88,12 +87,9 @@ export function CampaignHighlights() {
                 required
                 className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               />
-              <Button
-                type="submit"
-                className="bg-primary text-white hover:bg-primary/90 transition-colors duration-200 shadow-sm hover:shadow-md"
-              >
+              <button type="submit" className="glass-button-primary">
                 Subscribe
-              </Button>
+              </button>
             </form>
           )}
         </div>
