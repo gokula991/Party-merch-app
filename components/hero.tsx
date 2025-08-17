@@ -17,7 +17,7 @@ export function Hero() {
               accessories, every purchase supports our mission of social justice and development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" variant="secondary" asChild className="glossy-button">
+              <Button size="lg" variant="secondary" asChild className="glossy-button text-gray-900 font-semibold">
                 <Link href="/products">Shop Now</Link>
               </Button>
               <Button
