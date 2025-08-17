@@ -61,6 +61,48 @@ const allProducts = [
     image: "/political-dress-pants.png",
     category: "Pants",
   },
+  {
+    id: 9,
+    name: "Unity Long Sleeve Shirt",
+    price: 29.99,
+    image: "/political-unity-shirt.png",
+    category: "Shirts",
+  },
+  {
+    id: 10,
+    name: "Campaign Tank Top",
+    price: 22.99,
+    image: "/political-campaign-tank-top.png",
+    category: "Shirts",
+  },
+  {
+    id: 11,
+    name: "Victory V-Neck Tee",
+    price: 24.99,
+    image: "/political-victory-tshirt.png",
+    category: "Shirts",
+  },
+  {
+    id: 12,
+    name: "Campaign Trucker Hat",
+    price: 21.99,
+    image: "/political-trucker-hat.png",
+    category: "Caps",
+  },
+  {
+    id: 13,
+    name: "Party Beanie",
+    price: 16.99,
+    image: "/political-winter-beanie.png",
+    category: "Caps",
+  },
+  {
+    id: 14,
+    name: "Vintage Style Cap",
+    price: 23.99,
+    image: "/vintage-political-cap.png",
+    category: "Caps",
+  },
 ]
 
 export function ProductGrid() {
