@@ -17,13 +17,18 @@ export function Hero() {
               accessories, every purchase supports our mission of social justice and development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" variant="secondary" asChild className="glossy-button text-white">
+              <Button
+                size="lg"
+                variant="secondary"
+                asChild
+                className="bg-white text-primary hover:bg-gray-100 transition-colors duration-200 shadow-md hover:shadow-lg"
+              >
                 <Link href="/products">Shop Now</Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="glossy-button border-white/30 text-white hover:bg-white/20 bg-white/10 backdrop-blur-sm"
+                className="border-white/50 text-white hover:bg-white/10 bg-transparent backdrop-blur-sm transition-all duration-200 shadow-md hover:shadow-lg"
                 asChild
               >
                 <Link href="/donate">Make a Donation</Link>

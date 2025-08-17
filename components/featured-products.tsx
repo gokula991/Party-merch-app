@@ -79,7 +79,11 @@ export function FeaturedProducts() {
                   <h3 className="font-semibold text-gray-900 mb-2 drop-shadow-sm">{product.name}</h3>
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-bold text-gray-900 drop-shadow-sm">${product.price}</span>
-                    <Button size="sm" onClick={() => handleAddToCart(product)} className="glossy-button text-sm">
+                    <Button
+                      size="sm"
+                      onClick={() => handleAddToCart(product)}
+                      className="bg-primary text-white hover:bg-primary/90 transition-colors duration-200 shadow-sm hover:shadow-md"
+                    >
                       Add to Cart
                     </Button>
                   </div>
@@ -90,7 +94,11 @@ export function FeaturedProducts() {
         </div>
 
         <div className="text-center">
-          <Button size="lg" asChild className="glossy-button">
+          <Button
+            size="lg"
+            asChild
+            className="bg-primary text-white hover:bg-primary/90 transition-colors duration-200 shadow-md hover:shadow-lg"
+          >
             <Link href="/products">View All Products</Link>
           </Button>
         </div>

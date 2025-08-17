@@ -88,7 +88,12 @@ export function CampaignHighlights() {
                 required
                 className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               />
-              <Button type="submit">Subscribe</Button>
+              <Button
+                type="submit"
+                className="bg-primary text-white hover:bg-primary/90 transition-colors duration-200 shadow-sm hover:shadow-md"
+              >
+                Subscribe
+              </Button>
             </form>
           )}
         </div>
