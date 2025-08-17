@@ -50,7 +50,9 @@ export function CheckoutForm() {
       <div className="text-center py-12">
         <h2 className="text-2xl font-semibold mb-4">Your cart is empty</h2>
         <p className="text-gray-600 mb-6">Add some items to your cart before checking out</p>
-        <Button onClick={() => router.push("/products")}>Continue Shopping</Button>
+        <Button onClick={() => router.push("/products")} className="glossy-button">
+          Continue Shopping
+        </Button>
       </div>
     )
   }
@@ -61,7 +63,7 @@ export function CheckoutForm() {
       <div>
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Contact Information */}
-          <Card>
+          <Card className="glossy-card">
             <CardHeader>
               <CardTitle>Contact Information</CardTitle>
             </CardHeader>
@@ -74,7 +76,7 @@ export function CheckoutForm() {
                   required
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full px-3 py-2 glossy-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -86,7 +88,7 @@ export function CheckoutForm() {
                     required
                     value={formData.firstName}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-3 py-2 glossy-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                   />
                 </div>
                 <div>
@@ -97,7 +99,7 @@ export function CheckoutForm() {
                     required
                     value={formData.lastName}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-3 py-2 glossy-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                   />
                 </div>
               </div>
@@ -105,7 +107,7 @@ export function CheckoutForm() {
           </Card>
 
           {/* Shipping Address */}
-          <Card>
+          <Card className="glossy-card">
             <CardHeader>
               <CardTitle>Shipping Address</CardTitle>
             </CardHeader>
@@ -118,7 +120,7 @@ export function CheckoutForm() {
                   required
                   value={formData.address}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full px-3 py-2 glossy-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -130,7 +132,7 @@ export function CheckoutForm() {
                     required
                     value={formData.city}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-3 py-2 glossy-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                   />
                 </div>
                 <div>
@@ -141,7 +143,7 @@ export function CheckoutForm() {
                     required
                     value={formData.state}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-3 py-2 glossy-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                   />
                 </div>
               </div>
@@ -153,14 +155,14 @@ export function CheckoutForm() {
                   required
                   value={formData.zipCode}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full px-3 py-2 glossy-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                 />
               </div>
             </CardContent>
           </Card>
 
           {/* Payment Information */}
-          <Card>
+          <Card className="glossy-card">
             <CardHeader>
               <CardTitle>Payment Information</CardTitle>
             </CardHeader>
@@ -173,7 +175,7 @@ export function CheckoutForm() {
                   required
                   value={formData.nameOnCard}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full px-3 py-2 glossy-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                 />
               </div>
               <div>
@@ -185,7 +187,7 @@ export function CheckoutForm() {
                   placeholder="1234 5678 9012 3456"
                   value={formData.cardNumber}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full px-3 py-2 glossy-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -198,7 +200,7 @@ export function CheckoutForm() {
                     placeholder="MM/YY"
                     value={formData.expiryDate}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-3 py-2 glossy-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                   />
                 </div>
                 <div>
@@ -210,14 +212,14 @@ export function CheckoutForm() {
                     placeholder="123"
                     value={formData.cvv}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-3 py-2 glossy-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                   />
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Button type="submit" className="w-full" size="lg" disabled={isProcessing}>
+          <Button type="submit" className="w-full glossy-button" size="lg" disabled={isProcessing}>
             {isProcessing ? "Processing..." : `Complete Order - $${state.total.toFixed(2)}`}
           </Button>
         </form>
@@ -225,19 +227,18 @@ export function CheckoutForm() {
 
       {/* Order Summary */}
       <div>
-        <Card className="sticky top-8">
+        <Card className="sticky top-8 glossy-card">
           <CardHeader>
             <CardTitle>Order Summary</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               {state.items.map((item) => (
-                <div key={item.id} className="flex items-center space-x-4">
-                  <img
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.name}
-                    className="w-16 h-16 object-cover rounded"
-                  />
+                <div key={item.id} className="flex items-center space-x-4 glossy-cart-item p-3 rounded-lg">
+                  <div className="relative overflow-hidden rounded">
+                    <img src={item.image || "/placeholder.svg"} alt={item.name} className="w-16 h-16 object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/10"></div>
+                  </div>
                   <div className="flex-1">
                     <h3 className="font-medium text-sm">{item.name}</h3>
                     <p className="text-sm text-gray-500">Qty: {item.quantity}</p>
