@@ -4,12 +4,9 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ShoppingCart, Search, Menu } from "lucide-react"
 import { useCart } from "@/contexts/cart-context"
-import { CartDrawer } from "@/components/cart-drawer"
-import { useState } from "react"
 
 export function Header() {
   const { state } = useCart()
-  const [isCartOpen, setIsCartOpen] = useState(false)
 
   return (
     <header className="glossy-header border-b border-white/20 sticky top-0 z-50">
@@ -56,18 +53,15 @@ export function Header() {
             <Button variant="ghost" size="sm" className="hover:bg-white/20">
               <Search className="h-5 w-5" />
             </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              className="relative hover:bg-white/20"
-              onClick={() => setIsCartOpen(true)}
-            >
-              <ShoppingCart className="h-5 w-5" />
-              {state.itemCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-gradient-to-br from-primary to-primary/80 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center shadow-lg ring-2 ring-white/50">
-                  {state.itemCount}
-                </span>
-              )}
+            <Button variant="ghost" size="sm" className="relative hover:bg-white/20" asChild>
+              <Link href="/cart">
+                <ShoppingCart className="h-5 w-5" />
+                {state.itemCount > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-gradient-to-br from-primary to-primary/80 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center shadow-lg ring-2 ring-white/50">
+                    {state.itemCount}
+                  </span>
+                )}
+              </Link>
             </Button>
             <Button
               variant="outline"
@@ -85,8 +79,6 @@ export function Header() {
           </div>
         </div>
       </div>
-
-      <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </header>
   )
 }
