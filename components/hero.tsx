@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export function Hero() {
   return (
-    <section className="glossy-hero text-white py-20 relative">
+    <section className="glass-hero text-white py-20 relative">
       <div className="glass-orb glass-orb-1"></div>
       <div className="glass-orb glass-orb-2"></div>
       <div className="glass-orb glass-orb-3"></div>
@@ -25,7 +25,7 @@ export function Hero() {
             </div>
           </div>
           <div className="relative">
-            <div className="glossy-card p-4 rounded-2xl">
+            <div className="glass-card p-4 rounded-2xl">
               <img
                 src="/political-merchandise-display.png"
                 alt="YSR Congress Party Merchandise"

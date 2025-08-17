@@ -48,7 +48,7 @@ export function FeaturedProducts() {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 via-green-50/30 to-blue-50/20 relative overflow-hidden">
+    <section className="py-16 relative overflow-hidden">
       <div className="glass-orb glass-orb-1"></div>
       <div className="glass-orb glass-orb-2"></div>
 
@@ -62,7 +62,7 @@ export function FeaturedProducts() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {featuredProducts.map((product) => (
-            <Card key={product.id} className="glossy-product-card group">
+            <Card key={product.id} className="glass-product-card group">
               <CardContent className="p-0">
                 <div className="aspect-square overflow-hidden rounded-t-lg relative">
                   <img
