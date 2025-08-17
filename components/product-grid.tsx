@@ -79,21 +79,22 @@ export function ProductGrid() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {allProducts.map((product) => (
-        <Card key={product.id} className="group hover:shadow-lg transition-shadow">
+        <Card key={product.id} className="group glossy-card hover:shadow-lg transition-all duration-300">
           <CardContent className="p-0">
-            <div className="aspect-square overflow-hidden rounded-t-lg">
+            <div className="aspect-square overflow-hidden rounded-t-lg relative">
               <img
                 src={product.image || "/placeholder.svg"}
                 alt={product.name}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             <div className="p-4">
               <p className="text-sm text-primary font-medium mb-1">{product.category}</p>
               <h3 className="font-semibold text-gray-900 mb-2">{product.name}</h3>
               <div className="flex items-center justify-between">
                 <span className="text-lg font-bold text-gray-900">${product.price}</span>
-                <Button size="sm" onClick={() => handleAddToCart(product)}>
+                <Button size="sm" onClick={() => handleAddToCart(product)} className="glossy-button">
                   Add to Cart
                 </Button>
               </div>
